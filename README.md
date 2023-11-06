@@ -54,6 +54,11 @@
 ]
 ```
 
+### 接口地址
 
+| URL                                | 传递参数                    | 
+| -----------------------------------| --------------------------- |
+| http://152.136.105.246/img?src=url | src=图片url                 
+图片OCR识别文字接口，直接传图片地址就行，[样例图片](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201611%2F07%2F20161107124135_nS5CW.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1701889418&t=a5879f1d1505d88cf1ea430a19401da3)，识别结果：[年年月月花相似岁岁年年人相同还是一个人●●●](http://152.136.105.246/img?src=https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201611%2F07%2F20161107124135_nS5CW.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1701889418&t=a5879f1d1505d88cf1ea430a19401da3)
 
 
