@@ -20,6 +20,82 @@
 |post  | [http://152.136.105.246/search](http://152.136.105.246/search) | question=问题
 请求频率:5s/次
 
+python语法
+```python
+import requests
+
+url = "http://152.136.105.246/search"
+
+payload='question=12345'
+headers = {
+  'Content-Type': 'application/x-www-form-urlencoded'
+}
+
+response = requests.request("POST", url, headers=headers, data=payload)
+
+print(response.text)
+```
+nodejs语法
+```nodejs
+var axios = require('axios');
+var qs = require('qs');
+var data = qs.stringify({
+  'question': '12345' 
+});
+var config = {
+  method: 'post',
+  url: 'http://152.136.105.246/search',
+  headers: { 
+    'Content-Type': 'application/x-www-form-urlencoded'
+  },
+  data : data
+};
+
+axios(config)
+.then(function (response) {
+  console.log(JSON.stringify(response.data));
+})
+.catch(function (error) {
+  console.log(error);
+});
+
+```
+js语法
+```
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+
+var urlencoded = new URLSearchParams();
+urlencoded.append("question", "12345");
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: urlencoded,
+  redirect: 'follow'
+};
+
+fetch("http://152.136.105.246/search", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+```
+php语法
+```php
+<?php
+$client = new Client();
+$headers = [
+  'Content-Type' => 'application/x-www-form-urlencoded'
+];
+$options = [
+'form_params' => [
+  'question' => '12345'
+]];
+$request = new Request('POST', 'http://152.136.105.246/search', $headers);
+$res = $client->sendAsync($request, $options)->wait();
+echo $res->getBody();
+?>
+```
 返回样例
 ```json
 [
