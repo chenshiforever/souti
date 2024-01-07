@@ -17,14 +17,14 @@
 
 | 方法 | URL                                         | 传递参数                         | 
 | -----| --------------------------------------------| --------------------------------|
-|post  | [http://152.136.105.246/search](http://152.136.105.246/search) | question=问题
+|post  | [http://so.baipibook.cn/search](http://so.baipibook.cn/search) | question=问题
 请求频率:5s/次
 
 python语法
 ```python
 import requests
 
-url = "http://152.136.105.246/search"
+url = "http://so.baipibook.cn/search"
 
 payload='question=12345'
 headers = {
@@ -44,7 +44,7 @@ var data = qs.stringify({
 });
 var config = {
   method: 'post',
-  url: 'http://152.136.105.246/search',
+  url: 'http://so.baipibook.cn/search',
   headers: { 
     'Content-Type': 'application/x-www-form-urlencoded'
   },
@@ -75,7 +75,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://152.136.105.246/search", requestOptions)
+fetch("http://so.baipibook.cn/search", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -91,7 +91,7 @@ $options = [
 'form_params' => [
   'question' => '12345'
 ]];
-$request = new Request('POST', 'http://152.136.105.246/search', $headers);
+$request = new Request('POST', 'http://so.baipibook.cn/search', $headers);
 $res = $client->sendAsync($request, $options)->wait();
 echo $res->getBody();
 ?>
