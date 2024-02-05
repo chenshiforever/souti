@@ -12,19 +12,19 @@
 收录很多道题目，并在不断更新。
 
 #### 题目数据来源于互联网，非爬取网课平台题库，如有侵权请联系删除
-#### 在线访问demo http://152.136.105.246/123.html
+#### 在线访问demo http://so.studypro.club
 ### 接口地址
 
 | 方法 | URL                                         | 传递参数                         | 
 | -----| --------------------------------------------| --------------------------------|
-|post  | [http://152.136.105.246/search](http://152.136.105.246/search) | {question:问题,phone:手机号}
+|post  | [http://so.studypro.club/search](http://so.studypro.club/search) | {question:问题,phone:手机号}
 请求频率:5s/次
 
 python语法
 ```python
 import requests
 
-url = "http://152.136.105.246/search"
+url = "http://so.studypro.club/search"
 
 payload='question=12345&phone=130xxxxxxxxxx'
 headers = {
@@ -45,7 +45,7 @@ var data = qs.stringify({
 });
 var config = {
   method: 'post',
-  url: 'http://152.136.105.246/search',
+  url: 'http://so.studypro.club/search',
   headers: { 
     'Content-Type': 'application/x-www-form-urlencoded'
   },
@@ -76,7 +76,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://152.136.105.246/search", requestOptions)
+fetch("http://so.studypro.club/search", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -93,7 +93,7 @@ $options = [
   'question' => '12345',
   'phone' =>'13xxxxxxxx'
 ]];
-$request = new Request('POST', 'http://152.136.105.246/search', $headers);
+$request = new Request('POST', 'http://so.studypro.club/search', $headers);
 $res = $client->sendAsync($request, $options)->wait();
 echo $res->getBody();
 ?>
@@ -138,6 +138,6 @@ echo $res->getBody();
 
 | URL                                | 传递参数                    | 
 | -----------------------------------| --------------------------- |
-| http://152.136.105.246/img?src=url | src=图片url                 
-图片OCR识别文字接口，直接传图片地址就行，[样例图片](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201611%2F07%2F20161107124135_nS5CW.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1701889418&t=a5879f1d1505d88cf1ea430a19401da3)，识别结果：[年年月月花相似岁岁年年人相同还是一个人●●●](http://152.136.105.246/img?src=https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201611%2F07%2F20161107124135_nS5CW.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1701889418&t=a5879f1d1505d88cf1ea430a19401da3)
+| http://so.studypro.club/img?src=url | src=图片url                 
+图片OCR识别文字接口，直接传图片地址就行，[样例图片](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201611%2F07%2F20161107124135_nS5CW.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1701889418&t=a5879f1d1505d88cf1ea430a19401da3)，识别结果：[年年月月花相似岁岁年年人相同还是一个人●●●](http://so.studypro.club/img?src=https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201611%2F07%2F20161107124135_nS5CW.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1701889418&t=a5879f1d1505d88cf1ea430a19401da3)
 
