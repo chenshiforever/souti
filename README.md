@@ -19,7 +19,27 @@
 | -----| --------------------------------------------| --------------------------------|
 |post  | [http://so.studypro.club/search](http://so.studypro.club/search) | {question:问题,phone:手机号}
 请求频率:5s/次
-
+### ocs配置
+```
+[
+    {
+        "name": "搜题小帮手",
+        "homepage": "https://so.studypro.club",
+        "url": "https://so.studypro.club/search",
+        "method": "post",
+        "type": "GM_xmlhttpRequest",
+        "data": {
+            "question": "${title}",
+            "phone": 填写你的手机号
+        },
+        "headers": {
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Authorization": ""
+        },
+        "handler": "return (res)=> res.length != 0 ? res.map(r=>([r.question,r.answer])) : undefined"
+    }
+]
+```
 python语法
 ```python
 import requests
