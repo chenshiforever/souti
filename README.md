@@ -17,7 +17,7 @@
 
 | 方法 | URL                                         | 传递参数                         | 
 | -----| --------------------------------------------| --------------------------------|
-|post  | [http://152.136.105.246/search](http://152.136.105.246/search) | question=问题
+|post  | [http://152.136.105.246/search](http://152.136.105.246/search) | {question:问题,phone:手机号}
 请求频率:5s/次
 
 python语法
@@ -26,7 +26,7 @@ import requests
 
 url = "http://152.136.105.246/search"
 
-payload='question=12345'
+payload='question=12345&phone=130xxxxxxxxxx'
 headers = {
   'Content-Type': 'application/x-www-form-urlencoded'
 }
@@ -40,7 +40,8 @@ nodejs语法
 var axios = require('axios');
 var qs = require('qs');
 var data = qs.stringify({
-  'question': '12345' 
+  'question': '12345',
+  'phone':'13xxxxxxxx' 
 });
 var config = {
   method: 'post',
@@ -67,7 +68,7 @@ myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
 
 var urlencoded = new URLSearchParams();
 urlencoded.append("question", "12345");
-
+urlencoded.append("phone", "13xxxxxxxx");
 var requestOptions = {
   method: 'POST',
   headers: myHeaders,
@@ -89,7 +90,8 @@ $headers = [
 ];
 $options = [
 'form_params' => [
-  'question' => '12345'
+  'question' => '12345',
+  'phone' =>'13xxxxxxxx'
 ]];
 $request = new Request('POST', 'http://152.136.105.246/search', $headers);
 $res = $client->sendAsync($request, $options)->wait();
