@@ -17,7 +17,7 @@
 
 | 方法 | URL                                         | 传递参数                         | 
 | -----| --------------------------------------------| --------------------------------|
-|post  | [http://so.studypro.club/search](http://so.studypro.club/search) | {question:问题,phone:手机号}
+|post  | [http://so.studypro.club/api/search](http://so.studypro.club/api/search) | {question:问题,phone:手机号}
 请求频率:5s/次
 ### ocs配置
 ```
@@ -25,7 +25,7 @@
     {
         "name": "搜题小帮手",
         "homepage": "https://so.studypro.club",
-        "url": "https://so.studypro.club/search",
+        "url": "https://so.studypro.club/api/search",
         "method": "post",
         "type": "GM_xmlhttpRequest",
         "data": {
@@ -44,7 +44,7 @@ python语法
 ```python
 import requests
 
-url = "http://so.studypro.club/search"
+url = "http://so.studypro.club/api/search"
 
 payload='question=12345&phone=130xxxxxxxxxx'
 headers = {
@@ -65,7 +65,7 @@ var data = qs.stringify({
 });
 var config = {
   method: 'post',
-  url: 'http://so.studypro.club/search',
+  url: 'http://so.studypro.club/api/search',
   headers: { 
     'Content-Type': 'application/x-www-form-urlencoded'
   },
@@ -96,7 +96,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://so.studypro.club/search", requestOptions)
+fetch("http://so.studypro.club/api/search", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -113,7 +113,7 @@ $options = [
   'question' => '12345',
   'phone' =>'13xxxxxxxx'
 ]];
-$request = new Request('POST', 'http://so.studypro.club/search', $headers);
+$request = new Request('POST', 'http://so.studypro.club/api/search', $headers);
 $res = $client->sendAsync($request, $options)->wait();
 echo $res->getBody();
 ?>
