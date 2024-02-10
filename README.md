@@ -19,7 +19,9 @@
 | -----| --------------------------------------------| --------------------------------|
 |post  | [http://so.studypro.club/api/search](http://so.studypro.club/api/search) | {question:问题,phone:手机号}
 请求频率:5s/次
+
 ### ocs配置
+OCS脚本: 【[OCS全域名通用版](https://scriptcat.org/zh-CN/script-show-page/1398)】
 ```
 [
     {
@@ -30,16 +32,18 @@
         "type": "GM_xmlhttpRequest",
         "data": {
             "question": "${title}",
-            "phone": 填写你的手机号
+            "phone": 你的手机号
         },
         "headers": {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": ""
         },
-        "handler": "return (res)=> res.length != 0 ? res.map(r=>([r.question,r.answer])) : undefined"
+        "handler": "return (res)=> res.map ? res.map(r=>([r.question,r.answer])) : [res.question,res.answer]"
     }
 ]
+
 ```
+### 直接调用
 python语法
 ```python
 import requests
@@ -154,7 +158,7 @@ echo $res->getBody();
 ]
 ```
 
-### 接口地址
+### 图片识别接口地址
 
 | URL                                | 传递参数                    | 
 | -----------------------------------| --------------------------- |
