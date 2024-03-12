@@ -19,7 +19,8 @@
 | -----| --------------------------------------------| --------------------------------|
 |post  | [http://so.studypro.club/api/search](http://so.studypro.club/api/search) | {question:问题,phone:手机号}
 请求频率:5s/次
-
+### 悬浮窗搜题油猴脚本
+[搜题小帮手](https://gitee.com/chenshiforever/souti/blob/main/soti.js)
 ### ocs配置
 OCS脚本: 【[OCS全域名通用版](https://scriptcat.org/zh-CN/script-show-page/1398)】
 ```
